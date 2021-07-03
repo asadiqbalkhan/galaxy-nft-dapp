@@ -15,15 +15,16 @@ const Landing = () => {
 
     const ImageRight = styled(motion.img)`
     position: absolute;
-    width: 50%;
+    width: 480px;
     height: 100vh;
+
  
  `;
 
     const ImageMid = styled(motion.img)`
     position: absolute;
-    width: 1100px;
-    height: 200px;
+    width: 1200px;
+    height: 300px;
 
 `;
 
@@ -33,15 +34,16 @@ const Section = styled.section`
   justify-content: center;
   align-items: center;
   background: url(${backgroundImg});
+  position:relative;
 
   ${ImageRight}:nth-child(1) {
-    top: 40px;
+    /* top: 40px; */
     left: 800px;
   }
 
   ${ImageMid}:nth-child(2) {
-    bottom: -40px;
-    left: 30px;
+    bottom: 0px;
+    left: -50px;
   }
 
 `;
@@ -62,14 +64,15 @@ const ColumnLeft = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 5rem 2rem;
+  padding-bottom: 80px;
+  /* padding: 5rem 2rem; */
   h1 {
     margin-bottom: 0.5rem;
     font-size: 1rem;
   }
   p {
     margin: 1rem 0;
-    font-size: 4rem;
+    font-size: 2rem;
     line-height: 1.1;
   }
 `;
@@ -129,7 +132,7 @@ const ColumnRight = styled.div`
         
      <>
        <Section>
-           <ImageRight src={foregroundImg}/>
+           <ImageRight src={foregroundImg} drag="y" />
            <ImageMid src={midgroundImg}/>
       <Container>
         <ColumnLeft>
@@ -147,6 +150,7 @@ const ColumnRight = styled.div`
             transition={{ duration: 1 }}
           >
             Your journey to NFT
+            
           </motion.p>
           <Button
             whileHover={{ scale: 1.05 }}
