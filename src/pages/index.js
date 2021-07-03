@@ -4,6 +4,8 @@ import Landing from '../components/Landing'
 import About from '../components/About'
 import ComponentDivider from '../components/ComponentDivider'
 import Footer from '../components/Footer'
+import Universe from '../components/Universe'
+import CreateNFT from '../components/CreateNFT'
 
 const Home = () => {
     return (
@@ -11,11 +13,10 @@ const Home = () => {
             <NavBar />
             <Landing />
             <ComponentDivider />
-            {/* <Landing /> */}
-            
             <About />
             <ComponentDivider />
-            <About />
+            <CreateNFT/>
+            <Universe />
             <Footer />
         </>
     )

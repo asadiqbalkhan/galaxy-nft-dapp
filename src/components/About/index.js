@@ -1,7 +1,7 @@
 import React from 'react'
 
 import {AboutContainer, AboutWrapper, AboutRow, Column1, Column2, TopLine, TextWrapper, Heading, ImgWrap} from './AboutElements'
-import ImageTest from  '../../images/earth.png'
+
 const About = () => {
     return (
         <AboutContainer>

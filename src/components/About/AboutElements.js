@@ -20,34 +20,6 @@ export const AboutWrapper = styled.div`
     padding: 0 24px;
     justify-content: center;
 
-    /* &:before{
-        position: absolute;
-        content: '';
-        top: 10;
-        left: 10;
-        right: 10;
-        z-index: -1;
-        height: 100vh;
-        width: 720px;
-        margin: 0 auto;
-        filter: blur(40px);
-        transform: scale(2.3);
-        background: linear-gradient(90deg, #0fffc1, #7e0fff);
-        background-size: 200% 200%;
-        animation: animateglow 10s ease infinite;
-    }
-
-    @keyframes animateglow {
-        0%{
-            background-position: 0% 50%;
-        }
-        50%{
-            background-position: 100% 50%;
-        }
-        100%{
-            background-position: 0% 50%;
-        }
-    } */
 `
 
 export const AboutRow = styled.div`
