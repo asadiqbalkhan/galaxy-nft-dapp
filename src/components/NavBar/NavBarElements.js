@@ -5,8 +5,6 @@ import { Link as LinkS } from 'react-scroll'
 export const Nav = styled.nav`
     background: black;
     height: 40px;
-    /* margin-top: -80px; */
-   
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,7 +53,7 @@ export const NavMenu = styled.ul`
 `
 
 export const NavItem = styled.li`
-    height: 80px;
+    height: 42px;
     
 `
 
@@ -69,7 +67,8 @@ export const NavLinks = styled(LinkS)`
     cursor: pointer;
 
     &.active{
-        border-bottom: 3px solid #5ef2da;
+        border-bottom: 2px solid #D62AD0;
+     
     }
 `
 

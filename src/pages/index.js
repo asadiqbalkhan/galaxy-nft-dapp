@@ -16,6 +16,7 @@ const Home = () => {
             <About />
             <ComponentDivider />
             <CreateNFT/>
+            <ComponentDivider />
             <Universe />
             <Footer />
         </>

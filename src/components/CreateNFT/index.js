@@ -4,7 +4,7 @@ import {CreateNFTContainer, CreateNFTWrapper} from './CreateNFTElements'
 
 const CreateNFT = () => {
     return (
-        <CreateNFTContainer>
+        <CreateNFTContainer id="nft">
             <CreateNFTWrapper>
              NFT section and forms start here
             </CreateNFTWrapper>

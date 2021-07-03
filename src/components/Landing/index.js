@@ -152,7 +152,7 @@ const ColumnRight = styled.div`
             Your journey to NFT
             
           </motion.p>
-          <Button
+          <Button href='nft'
             whileHover={{ scale: 1.05 }}
             whileTap={{
               scale: 0.95,

@@ -4,7 +4,7 @@ import {AboutContainer, AboutWrapper, AboutRow, Column1, Column2, TopLine, TextW
 
 const About = () => {
     return (
-        <AboutContainer>
+        <AboutContainer id="about">
             <AboutWrapper>
                 <AboutRow>
                     <Column1>
