@@ -34,15 +34,15 @@ const NavBar = () => {
                     <NavMenu>
                         <NavItem>
                             <NavLinks to='about'
-                             smooth={true} duration={500} spy={true} exact='true' offset={-5} >about</NavLinks>
+                             smooth={true} duration={500} spy={true} exact='true' offset={15} >about</NavLinks>
                         </NavItem>
                         <NavItem>
                             <NavLinks to='nft'
-                             smooth={true} duration={600} spy={true} exact='true' offset={-5} >nft</NavLinks>
+                             smooth={true} duration={600} spy={true} exact='true' offset={25} >nft</NavLinks>
                         </NavItem>
                         <NavItem>
                             <NavLinks to='collection'
-                             smooth={true} duration={700} spy={true} exact='true' offset={-5} >universe</NavLinks>
+                             smooth={true} duration={700} spy={true} exact='true' offset={25} >universe</NavLinks>
                         </NavItem>
                     </NavMenu>
                 </NavbarContainer>

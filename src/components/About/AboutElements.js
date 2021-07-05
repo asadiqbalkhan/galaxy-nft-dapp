@@ -22,6 +22,19 @@ export const AboutWrapper = styled.div`
 
 `
 
+export const ButtonWrapper = styled.div`
+    display: grid;
+    z-index: 1;
+    height: 100px;
+    width: 100%;
+    max-width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0rem 0px;
+  
+    justify-content: center;
+
+`
 export const AboutRow = styled.div`
     display: grid;
     grid-auto-columns: minmax()(auto, 1fr);
