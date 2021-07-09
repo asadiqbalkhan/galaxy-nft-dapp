@@ -8,7 +8,7 @@ import { UniverseCard, UniverseContainer, UniverseH1, UniverseIcon, UniverseWrap
 const Universe = () => {
     return (
         <UniverseContainer id="collection">
-            <UniverseH1>Your Universe</UniverseH1>
+            <UniverseH1>Your Galaxies</UniverseH1>
             <UniverseWrapper>
                 <UniverseCard>
                     <UniverseIcon src={mars} />
