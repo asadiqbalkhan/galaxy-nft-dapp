@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
-
-import {ButtonWrapper, AboutContainer, AboutWrapper, AboutRow, Column1, Column2, TopLine, TextWrapper, Heading, ImgWrap} from './AboutElements'
+import Modal, { ModalProvider, BaseModalBackground } from "styled-react-modal"
+import {StyedModal, ButtonWrapper, AboutContainer, AboutWrapper, AboutRow, Column1, Column2, TopLine, TextWrapper, Heading, ImgWrap} from './AboutElements'
 import {Button} from '../ButtonElement'
-
+import {FancyModalButton, FadingBackground} from './Modal'
 import {ReactComponent as Image} from '../../images/tostars.svg'
 const About = () => {
 
@@ -19,6 +19,7 @@ const About = () => {
     useEffect(() => {
         window.addEventListener('scroll', changeNav, [])
     })
+
 
     return (
         <AboutContainer id="about" scrollNav={scrollNav}>
@@ -46,7 +47,15 @@ const About = () => {
                     </ButtonWrapper>
                     </Column1>
                     <Column2>
-            
+                    {/* Testing Modal Functionality STARTS  HERE*/}
+                    <ModalProvider backgroundComponent={FadingBackground}>
+                    <div className="App">
+                        <h1>Hello styled-react-modal</h1>
+                        
+                    <FancyModalButton />
+                    </div>
+                    </ModalProvider>
+                    {/* Testing Modal Functionality ENDS HERE */}
                     <ImgWrap>
                         <Image width='400px' height='400px' />
                     </ImgWrap>

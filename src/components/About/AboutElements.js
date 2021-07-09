@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Modal, { ModalProvider, BaseModalBackground } from "styled-react-modal"
 
 export const AboutContainer = styled.div`
     color:#fff;
@@ -103,4 +104,15 @@ export const Img = styled.img`
     width: 100%;
     margin: 0 0 10px 0;
     padding-right: 0;
+`
+
+export const StyledModal = Modal.styled`
+    width: 20rem;
+    height: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    opacity: ${(props) => props.opacity};
+    transition : all 0.3s ease-in-out;
 `
