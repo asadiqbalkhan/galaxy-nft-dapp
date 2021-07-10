@@ -1,5 +1,6 @@
 # Project Architecture 🪐
-![archi](https://user-images.githubusercontent.com/22265347/125156647-fb692400-e17f-11eb-8172-20a3b7ae3ab7.png)
+![archi](https://user-images.githubusercontent.com/22265347/125156700-4d11ae80-e180-11eb-93b0-f40577e82fb8.png)
+
 
 # https://galaxyonblocks.netlify.app/
 
