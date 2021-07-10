@@ -1,6 +1,6 @@
 # Project Architecture 🪐
 ![arch](https://user-images.githubusercontent.com/22265347/125155990-93fda500-e17c-11eb-9d51-c7203dc66172.png)
-# www.https://galaxyonblocks.netlify.app/
+# https://galaxyonblocks.netlify.app/
 
 # Landing Page with showing the current active wallet account in the nav bar 🚀
 
