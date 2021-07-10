@@ -41,7 +41,9 @@ class DApp extends Component {
       );
     }
   }
-
+  // ropsten contract address 0xa8e3032B6723D539C743dcC19eAd84B17539fF90
+  // ropsten tx hash 0xb6b8585a0ca47272314891168550dbea3e80789f8c49e81fe1294ac3f376ab9f
+  // ropsten account 0x2eC5Ddd06D5355FF1591000B4e9c160b439de228
   async loadBlockchainData() {
     const web3 = window.web3;
     //Load account
@@ -149,9 +151,6 @@ class DApp extends Component {
                 color="#3f25a9"
                 fadeIn="none"
               />
-              <h1 style={{ color: "white", marginTop: "40px" }}>
-                Please connect to Meta Mask to continue to the DApp
-              </h1>
             </AppLoadingContents>
           </AppLoading>
         ) : (
