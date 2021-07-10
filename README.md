@@ -14,6 +14,8 @@
 
 <img width="1275" alt="Screenshot 2021-07-10 at 12 49 43" src="https://user-images.githubusercontent.com/22265347/125156127-54838880-e17d-11eb-892f-37e4b84875aa.png">
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/085fff06-8388-4e71-b102-72362e58a29c/deploy-status)](https://app.netlify.com/sites/galaxyonblocks/deploys)
+
 
 
 
