@@ -4,7 +4,7 @@
 
 # https://galaxyonblocks.netlify.app/
 
-# Landing Page with showing the current active wallet account in the nav bar 🚀
+# Landing Page which shows the current active wallet account in the nav bar 🚀
 
 <img width="1279" alt="Screenshot 2021-07-10 at 12 43 59" src="https://user-images.githubusercontent.com/22265347/125156040-e4750280-e17c-11eb-8586-211498942646.png">
 
