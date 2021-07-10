@@ -12,6 +12,8 @@ import Universe from "../components/Universe";
 import CreateNFT from "../components/CreateNFT";
 // import Main from './Main'
 // import Navbar from './Navbar'
+import Spinner from "react-spinkit";
+import { AppLoading, AppLoadingContents } from "./Loading";
 
 //Declare IPFS
 const ipfsClient = require("ipfs-http-client");
@@ -99,8 +101,8 @@ class DApp extends Component {
         .send({ from: this.state.account })
         .on("transactionHash", (hash) => {
           this.setState({ loading: false });
-          // refresh
-          //   window.location.reload(false);
+
+          window.location.reload(false);
         });
     });
   };
@@ -119,6 +121,7 @@ class DApp extends Component {
     super(props);
     this.state = {
       account: "",
+      accountStatus: false,
       contract: null,
       planets: [],
       loading: true,
@@ -132,18 +135,40 @@ class DApp extends Component {
   render() {
     return (
       <>
-        <NavBar account={this.state.account} />
-        <Landing />
-        <ComponentDivider />
-        <About />
-        <ComponentDivider />
-        <CreateNFT
-          planets={this.state.planets}
-          captureFile={this.captureFile}
-          createPlanet={this.createPlanet}
-          getValueInput={this.getValueInput}
-          buyNFT={this.buyNFT}
+        <NavBar
+          account={this.state.account}
+          accountStatus={this.state.accountStatus}
+          loading={this.state.loading}
         />
+        {this.state.loading ? (
+          <AppLoading>
+            <AppLoadingContents>
+              <img src="../images/background.png" alt="" />
+              <Spinner
+                name="ball-spin-fade-loader"
+                color="#3f25a9"
+                fadeIn="none"
+              />
+              <h1 style={{ color: "white", marginTop: "40px" }}>
+                Please connect to Meta Mask to continue to the DApp
+              </h1>
+            </AppLoadingContents>
+          </AppLoading>
+        ) : (
+          <>
+            <Landing />
+            <ComponentDivider />
+            <About />
+            <ComponentDivider />
+            <CreateNFT
+              planets={this.state.planets}
+              captureFile={this.captureFile}
+              createPlanet={this.createPlanet}
+              getValueInput={this.getValueInput}
+              buyNFT={this.buyNFT}
+            />
+          </>
+        )}
 
         {/* <Universe /> */}
         <Footer />

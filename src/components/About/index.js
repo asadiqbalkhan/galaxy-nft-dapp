@@ -15,7 +15,8 @@ import {
 } from "./AboutElements";
 import { Button } from "../ButtonElement";
 import { FancyModalButton, FadingBackground } from "./Modal";
-import { ReactComponent as Image } from "../../images/tostars.svg";
+import { ReactComponent as Image } from "../../images/tomoon.svg";
+
 const About = () => {
   const [scrollNav, setScrollNav] = useState(false);
 
@@ -61,7 +62,6 @@ const About = () => {
               >
                 View Collection
               </Button>
-              <Button to="transfer">Transfer Planet</Button>
             </ButtonWrapper>
           </Column1>
           <Column2>

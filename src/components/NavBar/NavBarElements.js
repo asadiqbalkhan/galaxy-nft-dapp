@@ -77,14 +77,26 @@ export const NavbarLeft = styled.div`
 
 export const NavBarActive = styled.div`
   position: absolute;
-  right: 78%;
-  top: 35px;
+  right: 77%;
+  top: 37px;
   width: 10px;
   height: 10px;
   background-color: #abff00;
   border-radius: 50%;
   box-shadow: rgba(0, 0, 0, 0.5) 0 -2px 7px 1px, inset #304701 0 -1px 9px,
     #89ff00 0 2px 12px;
+`;
+
+export const NavBarOffline = styled.div`
+  position: absolute;
+  right: -20%;
+  top: 37px;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px,
+    rgba(255, 0, 0, 0.5) 0 2px 12px;
 `;
 
 export const NavAccountShow = styled.h6`

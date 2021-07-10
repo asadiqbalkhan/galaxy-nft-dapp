@@ -7,10 +7,13 @@ import {
   UniverseWrapper,
   UniverseH2,
   UniverseP,
+  UniverseOwner,
 } from "../Universe/UniverseElements";
 import Identicon from "identicon.js";
 import { Button } from "../ButtonElement";
-
+import { FaEthereum } from "react-icons/fa";
+import { BiPlanet } from "react-icons/bi";
+import { IoRocketOutline } from "react-icons/io5";
 import ComponentDivider from "../ComponentDivider";
 
 import {
@@ -24,6 +27,7 @@ import {
   FormLabel,
   FormInput,
 } from "./CreateNFTElements";
+
 class CreateNFT extends Component {
   render() {
     return (
@@ -40,41 +44,39 @@ class CreateNFT extends Component {
                     this.props.createPlanet(price, planet_name);
                   }}
                 >
-                  <FormHeading>Create Planet</FormHeading>
-                  <FormLabel>Name</FormLabel>
+                  <FormHeading>Create Planet NFT</FormHeading>
+                  <BiPlanet />
                   <FormInput
                     id="planetNameInput"
                     type="text"
                     ref={(input) => {
                       this.planetNameInput = input;
                     }}
-                    placeholder="Enter planet 🪐name"
+                    placeholder="Enter planet name"
                     required
-                  >
-                    {/* User Input */}
-                  </FormInput>
-                  <FormLabel>Price</FormLabel>
+                  />
+                  <FaEthereum />
                   <FormInput
-                    type="number"
-                    placeholder="Enter price in ETH.."
+                    type="text"
+                    placeholder="Enter price in ETH"
                     required
                     id="priceInput"
                     ref={(input) => {
                       this.priceInput = input;
                     }}
-                  >
-                    {/* User Input */}
-                  </FormInput>
-                  <FormLabel>Upload Image</FormLabel>
-                  <FormInput
-                    type="file"
-                    accept=".jpeg, .jpg, .png, .gif, .bmp"
-                    onChange={this.props.captureFile}
-                  >
-                    {/* User Upload Image */}
-                  </FormInput>
-                  <ButtonNFT type="submit">Submit</ButtonNFT>
-                  <ButtonNFT> Cancel </ButtonNFT>
+                  />
+                  <IoRocketOutline />
+
+                  <FormLabel>
+                    Choose your NFT
+                    <FormInput
+                      type="file"
+                      hidden
+                      accept=".jpeg, .jpg, .png, .gif, .bmp"
+                      onChange={this.props.captureFile}
+                    />
+                  </FormLabel>
+                  <ButtonNFT type="submit">Enter Galaxy</ButtonNFT>
                 </Form>
               </CreateNFTColumn>
             </CreateNFTrow>
@@ -83,17 +85,18 @@ class CreateNFT extends Component {
 
         <ComponentDivider />
         {/* Collection of Tokens  */}
-        {this.props.planets.map((planet, key) => (
-          <UniverseContainer id="collection" key={key}>
-            <UniverseH1>Your Galaxies</UniverseH1>
-            <UniverseWrapper>
-              <UniverseCard>
+        <UniverseContainer id="collection">
+          <UniverseH1>Your Decentralized Universe</UniverseH1>
+
+          <UniverseWrapper>
+            {this.props.planets.map((planet, key) => (
+              <UniverseCard key={key}>
                 <UniverseIcon
                   src={`https://ipfs.infura.io/ipfs/${planet.hash}`}
                   width="65%"
                 />
                 {/* H2 is the planet_name */}
-                <UniverseH2>{planet.owner}</UniverseH2>
+                <UniverseOwner>{planet.owner}</UniverseOwner>
                 <UniverseH2>{planet.planet_name}</UniverseH2>
 
                 {/* Button to purchase NFT */}
@@ -108,12 +111,12 @@ class CreateNFT extends Component {
                     this.props.buyNFT(event.target.name, toWeiPrice);
                   }}
                 >
-                  Buy for {planet.price}
+                  <FaEthereum /> <span>{planet.price}</span>
                 </Button>
               </UniverseCard>
-            </UniverseWrapper>
-          </UniverseContainer>
-        ))}
+            ))}
+          </UniverseWrapper>
+        </UniverseContainer>
       </>
     );
   }

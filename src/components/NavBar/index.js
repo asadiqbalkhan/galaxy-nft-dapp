@@ -10,12 +10,14 @@ import {
   NavAccountShow,
   NavbarLeft,
   NavBarActive,
+  NavBarOffline,
 } from "./NavBarElements";
 
 import { animateScroll as scroll } from "react-scroll";
 
-const NavBar = ({ account }) => {
+const NavBar = ({ account, loading }) => {
   const [scrollNav, setScrollNav] = useState(false);
+  const [navbarActive, setNavbarActive] = useState(false);
 
   const changeNav = () => {
     if (window.scrollY >= 80) {
@@ -39,8 +41,8 @@ const NavBar = ({ account }) => {
         <NavbarContainer>
           <NavbarLeft>
             <NavLogo onClick={toggleHome}>Galaxy </NavLogo>
-            <NavBarActive> </NavBarActive>
-            <NavAccountShow> {account} </NavAccountShow>
+            {loading ? <NavBarOffline /> : <NavBarActive />}
+            {!loading && <NavAccountShow> {account} </NavAccountShow>}
           </NavbarLeft>
           <NavMenu>
             <NavItem>

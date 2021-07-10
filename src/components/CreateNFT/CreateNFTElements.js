@@ -51,7 +51,11 @@ export const CreateNFTColumn = styled.div`
   grid-area: col1;
 `;
 
-export const Form = styled.form``;
+export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  min-width: 400px;
+`;
 
 export const FormHeading = styled.p`
   color: #42d7f5;
@@ -60,31 +64,76 @@ export const FormHeading = styled.p`
   font-weight: 700;
   letter-spacing: 1.4px;
   text-transform: uppercase;
-  margin-bottom: 16px;
+  margin-bottom: 30px;
 `;
 
 export const FormInput = styled.input`
-  padding: 0.5em;
   color: #fff;
   background: transparent;
   border: 1px solid #fff;
-  border-radius: 30px;
+  border-radius: 20px;
   width: 100%;
   outline: none;
-  margin-bottom: 0.5em;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  padding: 10px;
+  padding-left: 15px;
+  letter-spacing: 1.5px;
+
+  &::placeholder {
+    color: #f792f1;
+    font-size: 11px;
+  }
+
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+
+  &:focus {
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    border: 1px solid rgba(81, 203, 238, 1);
+  }
 `;
 
 export const FormLabel = styled.label`
-  margin-bottom: 0.5em;
-  color: #fff;
-  display: block;
+  color: #f792f1;
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  width: 100%;
+  outline: none;
+  cursor: pointer;
+  font-size: 11px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  padding: 10px;
+  padding-left: 15px;
+  letter-spacing: 1.5px;
+
+  &::placeholder {
+    color: #f792f1;
+    font-size: 11px;
+  }
+
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+
+  &:focus {
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    border: 1px solid rgba(81, 203, 238, 1);
+  }
 `;
 
 export const ButtonNFT = styled.button`
   padding: 1rem 2rem;
   font-size: 1rem;
   border: 1px solid #fff;
-  border-radius: 15px;
+  border-radius: 20px;
   outline: none;
   cursor: pointer;
   background: transparent;
@@ -92,8 +141,19 @@ export const ButtonNFT = styled.button`
   margin-top: 15px;
   transition: all 0.4s;
   position: relative;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 30px;
+  transition: all 250ms;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  white-space: nowrap;
 
   &:hover {
-    background-color: #5c33f6;
+    background-color: #42d7f5;
+    border: none;
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    border: 1px solid rgba(81, 203, 238, 1);
+    font-weight: 700;
   }
 `;
