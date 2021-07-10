@@ -6764,6 +6764,11 @@
   dependencies:
     "postcss" "^7.0.14"
 
+"identicon.js@^2.3.3":
+  "integrity" "sha512-/qgOkXKZ7YbeCYbawJ9uQQ3XJ3uBg9VDpvHjabCAPp6aRMhjLaFAxG90+1TxzrhKaj6AYpVGrx6UXQfQA41UEA=="
+  "resolved" "https://registry.npmjs.org/identicon.js/-/identicon.js-2.3.3.tgz"
+  "version" "2.3.3"
+
 "identity-obj-proxy@3.0.0":
   "integrity" "sha1-lNK9qWCERT7zb7xarsN+D3nx/BQ="
   "resolved" "https://registry.npmjs.org/identity-obj-proxy/-/identity-obj-proxy-3.0.0.tgz"
